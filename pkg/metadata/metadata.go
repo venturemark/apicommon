@@ -4,7 +4,6 @@
 //
 //     audience
 //     message
-//     metric
 //     organization
 //     timeline
 //     update

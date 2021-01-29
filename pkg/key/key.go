@@ -14,9 +14,6 @@ const (
 )
 
 const (
-	// Metric is the storage key for mapping metric IDs. An audience can have
-	// multiple metrics.
-	Metric = "org:%s:tml:%s:met"
 	// Update is the storage key for mapping update IDs. An audience can have
 	// multiple updates.
 	Update = "org:%s:tml:%s:upd"
