@@ -1,10 +1,8 @@
 // Package metadata provides label constants used for resource identification
-// and information sharing. We need to consider the following resources within
-// the system.
+// and information sharing. Below is an incomplete list of resources we may take
+// care of.
 //
-//     audience
 //     message
-//     organization
 //     timeline
 //     update
 //     user
