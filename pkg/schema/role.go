@@ -12,5 +12,4 @@ type RoleObj struct {
 type RoleObjProperty struct {
 	Kin string `json:"kin"`
 	Res string `json:"res"`
-	Sub string `json:"sub"`
 }
