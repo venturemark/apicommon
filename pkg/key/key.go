@@ -24,3 +24,9 @@ const (
 	// multiple messages.
 	Message = "org:%s:tml:%s:upd:%s:mes"
 )
+
+const (
+	// Role is the storage key for mapping role IDs. An user can have multiple
+	// roles.
+	Role = "usr:%s:res:rol"
+)
