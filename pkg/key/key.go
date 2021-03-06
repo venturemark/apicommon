@@ -4,7 +4,7 @@ const (
 	// Audience is the storage key for mapping audience IDs. A venture can have
 	// multiple audiences, while a user can be part of multiple ventures as well
 	// as multiple audiences.
-	Audience = "aud:%s"
+	Audience = "aud"
 )
 
 const (
@@ -36,5 +36,5 @@ const (
 const (
 	// Venture is the storage key for mapping venture IDs. A venture can have
 	// multiple timelines.
-	Venture = "ven:%s"
+	Venture = "ven"
 )
