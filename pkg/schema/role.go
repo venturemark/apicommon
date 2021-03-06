@@ -6,10 +6,4 @@ type Role struct {
 
 type RoleObj struct {
 	Metadata map[string]string `json:"metadata"`
-	Property RoleObjProperty   `json:"property"`
-}
-
-type RoleObjProperty struct {
-	Kin string `json:"kin"`
-	Res string `json:"res"`
 }
