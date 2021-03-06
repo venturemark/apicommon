@@ -8,55 +8,64 @@ import (
 	"github.com/venturemark/apicommon/pkg/metadata"
 )
 
+func Audience(m map[string]string) string {
+	var aui string
+	{
+		aui = m[metadata.AudienceID]
+	}
+
+	return hash(fmt.Sprintf(key.Audience, aui))
+}
+
 func Message(m map[string]string) string {
-	var tid string
+	var tii string
 	{
-		tid = m[metadata.TimelineID]
+		tii = m[metadata.TimelineID]
 	}
 
-	var uid string
+	var upi string
 	{
-		uid = m[metadata.UpdateID]
+		upi = m[metadata.UpdateID]
 	}
 
-	var vid string
+	var vei string
 	{
-		vid = m[metadata.VentureID]
+		vei = m[metadata.VentureID]
 	}
 
-	return hash(fmt.Sprintf(key.Message, vid, tid, uid))
+	return hash(fmt.Sprintf(key.Message, vei, tii, upi))
 }
 
 func Timeline(m map[string]string) string {
-	var vid string
+	var vei string
 	{
-		vid = m[metadata.VentureID]
+		vei = m[metadata.VentureID]
 	}
 
-	return hash(fmt.Sprintf(key.Timeline, vid))
+	return hash(fmt.Sprintf(key.Timeline, vei))
 }
 
 func Update(m map[string]string) string {
-	var tid string
+	var tii string
 	{
-		tid = m[metadata.TimelineID]
+		tii = m[metadata.TimelineID]
 	}
 
-	var vid string
+	var vei string
 	{
-		vid = m[metadata.VentureID]
+		vei = m[metadata.VentureID]
 	}
 
-	return hash(fmt.Sprintf(key.Update, vid, tid))
+	return hash(fmt.Sprintf(key.Update, vei, tii))
 }
 
 func Venture(m map[string]string) string {
-	var vid string
+	var vei string
 	{
-		vid = m[metadata.VentureID]
+		vei = m[metadata.VentureID]
 	}
 
-	return hash(fmt.Sprintf(key.Venture, vid))
+	return hash(fmt.Sprintf(key.Venture, vei))
 }
 
 func hash(s string) string {

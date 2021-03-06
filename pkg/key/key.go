@@ -4,7 +4,7 @@ const (
 	// Audience is the storage key for mapping audience IDs. A venture can have
 	// multiple audiences, while a user can be part of multiple ventures as well
 	// as multiple audiences.
-	Audience = "ven:%s:aud"
+	Audience = "aud:%s"
 )
 
 const (
