@@ -18,7 +18,7 @@ func Venture(m map[string]string) *Key {
 	var k *Key
 	{
 		var id *ID
-		{
+		if vei != "" {
 			f, err := strconv.ParseFloat(vei, 64)
 			if err != nil {
 				panic(err)

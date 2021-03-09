@@ -36,7 +36,7 @@ func Role(m map[string]string) *Key {
 	var k *Key
 	{
 		var id *ID
-		{
+		if roi != "" {
 			f, err := strconv.ParseFloat(roi, 64)
 			if err != nil {
 				panic(err)

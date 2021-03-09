@@ -19,7 +19,7 @@ func Audience(m map[string]string) *Key {
 	var k *Key
 	{
 		var id *ID
-		{
+		if aui != "" {
 			f, err := strconv.ParseFloat(aui, 64)
 			if err != nil {
 				panic(err)

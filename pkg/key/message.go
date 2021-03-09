@@ -33,7 +33,7 @@ func Message(m map[string]string) *Key {
 	var k *Key
 	{
 		var id *ID
-		{
+		if mei != "" {
 			f, err := strconv.ParseFloat(mei, 64)
 			if err != nil {
 				panic(err)

@@ -28,7 +28,7 @@ func Update(m map[string]string) *Key {
 	var k *Key
 	{
 		var id *ID
-		{
+		if upi != "" {
 			f, err := strconv.ParseFloat(upi, 64)
 			if err != nil {
 				panic(err)

@@ -23,7 +23,7 @@ func Timeline(m map[string]string) *Key {
 	var k *Key
 	{
 		var id *ID
-		{
+		if tii != "" {
 			f, err := strconv.ParseFloat(tii, 64)
 			if err != nil {
 				panic(err)
