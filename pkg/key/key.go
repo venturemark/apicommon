@@ -1,9 +1,14 @@
 package key
 
 type Key struct {
+	id  *ID
 	ele string
 	lis string
 	rol string
+}
+
+func (k *Key) ID() *ID {
+	return k.id
 }
 
 func (k *Key) Elem() string {

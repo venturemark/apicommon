@@ -2,6 +2,7 @@ package key
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
 )
@@ -31,6 +32,20 @@ func Message(m map[string]string) *Key {
 
 	var k *Key
 	{
+		var id *ID
+		{
+			f, err := strconv.ParseFloat(mei, 64)
+			if err != nil {
+				panic(err)
+			}
+			s := mei
+
+			id = &ID{
+				f: f,
+				s: s,
+			}
+		}
+
 		var ele string
 		{
 			ele = fmt.Sprintf("res:%s:mes", hash("ven:%s:tim:%s:upd:%s:mes:%s", vei, tii, upi, mei))
@@ -47,6 +62,7 @@ func Message(m map[string]string) *Key {
 		}
 
 		k = &Key{
+			id:  id,
 			ele: ele,
 			lis: lis,
 			rol: rol,

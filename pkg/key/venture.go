@@ -2,6 +2,7 @@ package key
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
 )
@@ -9,16 +10,30 @@ import (
 // Venture is the storage key for mapping venture IDs. A venture can have
 // multiple timelines.
 func Venture(m map[string]string) *Key {
-	var ven string
+	var vei string
 	{
-		ven = m[metadata.VentureID]
+		vei = m[metadata.VentureID]
 	}
 
 	var k *Key
 	{
+		var id *ID
+		{
+			f, err := strconv.ParseFloat(vei, 64)
+			if err != nil {
+				panic(err)
+			}
+			s := vei
+
+			id = &ID{
+				f: f,
+				s: s,
+			}
+		}
+
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:ven", hash("ven:%s", ven))
+			ele = fmt.Sprintf("res:%s:ven", hash("ven:%s", vei))
 		}
 
 		var lis string
@@ -32,6 +47,7 @@ func Venture(m map[string]string) *Key {
 		}
 
 		k = &Key{
+			id:  id,
 			ele: ele,
 			lis: lis,
 			rol: rol,

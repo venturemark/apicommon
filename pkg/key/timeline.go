@@ -2,6 +2,7 @@ package key
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
 )
@@ -21,6 +22,20 @@ func Timeline(m map[string]string) *Key {
 
 	var k *Key
 	{
+		var id *ID
+		{
+			f, err := strconv.ParseFloat(tii, 64)
+			if err != nil {
+				panic(err)
+			}
+			s := tii
+
+			id = &ID{
+				f: f,
+				s: s,
+			}
+		}
+
 		var ele string
 		{
 			ele = fmt.Sprintf("res:%s:tim", hash("ven:%s:tim:%s", vei, tii))
@@ -37,6 +52,7 @@ func Timeline(m map[string]string) *Key {
 		}
 
 		k = &Key{
+			id:  id,
 			ele: ele,
 			lis: lis,
 			rol: rol,
