@@ -41,16 +41,10 @@ func Venture(m map[string]string) *Key {
 			lis = fmt.Sprintf("res:%s:ven", hash("ven"))
 		}
 
-		var rol string
-		{
-			rol = fmt.Sprintf("res:%s:rol", hash(ele))
-		}
-
 		k = &Key{
 			id:  id,
 			ele: ele,
 			lis: lis,
-			rol: rol,
 		}
 	}
 

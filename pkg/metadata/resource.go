@@ -1,7 +1,7 @@
 package metadata
 
 const (
-	ResourceID         = "resource.venturemark.co/id"
+	ResourceHash       = "resource.venturemark.co/hash"
 	ResourceKind       = "resource.venturemark.co/kind"
 	ResourceVisibility = "resource.venturemark.co/visibility"
 )

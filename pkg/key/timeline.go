@@ -46,16 +46,10 @@ func Timeline(m map[string]string) *Key {
 			lis = fmt.Sprintf("res:%s:tim", hash("ven:%s:tim", vei))
 		}
 
-		var rol string
-		{
-			rol = fmt.Sprintf("res:%s:rol", hash(ele))
-		}
-
 		k = &Key{
 			id:  id,
 			ele: ele,
 			lis: lis,
-			rol: rol,
 		}
 	}
 

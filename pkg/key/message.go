@@ -56,16 +56,10 @@ func Message(m map[string]string) *Key {
 			lis = fmt.Sprintf("res:%s:mes", hash("ven:%s:tim:%s:upd:%s:mes", vei, tii, upi))
 		}
 
-		var rol string
-		{
-			rol = fmt.Sprintf("res:%s:rol", hash(ele))
-		}
-
 		k = &Key{
 			id:  id,
 			ele: ele,
 			lis: lis,
-			rol: rol,
 		}
 	}
 
