@@ -56,7 +56,7 @@ func Role(m map[string]string) *Key {
 
 		var lis string
 		{
-			ele = fmt.Sprintf("res:%s:rol", hash("res:%s:rol", rei))
+			lis = fmt.Sprintf("res:%s:rol", hash("res:%s:rol", rei))
 		}
 
 		k = &Key{
