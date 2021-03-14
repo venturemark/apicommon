@@ -14,15 +14,15 @@ func User(m map[string]string) *Key {
 	{
 		switch m[metadata.ResourceKind] {
 		case "audience":
-			rei = Audience(m).Elem()
+			rei = Audience(m).List()
 		case "message":
-			rei = Message(m).Elem()
+			rei = Message(m).List()
 		case "timeline":
-			rei = Timeline(m).Elem()
+			rei = Timeline(m).List()
 		case "update":
-			rei = Update(m).Elem()
+			rei = Update(m).List()
 		case "venture":
-			rei = Venture(m).Elem()
+			rei = Venture(m).List()
 		}
 	}
 
