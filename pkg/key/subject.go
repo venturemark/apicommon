@@ -2,14 +2,13 @@ package key
 
 import (
 	"fmt"
-	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
 )
 
-// User is the storage key for mapping user IDs. A user can have multiple
+// Subject is the storage key for mapping user IDs. A user can have multiple
 // associations with multiple resources.
-func User(m map[string]string) *Key {
+func Subject(m map[string]string) *Key {
 	var rei string
 	{
 		switch m[metadata.ResourceKind] {
@@ -34,16 +33,9 @@ func User(m map[string]string) *Key {
 	var k *Key
 	{
 		var id *ID
-		if usi != "" {
-			f, err := strconv.ParseFloat(usi, 64)
-			if err != nil {
-				panic(err)
-			}
-			s := usi
-
+		{
 			id = &ID{
-				f: f,
-				s: s,
+				s: usi,
 			}
 		}
 
