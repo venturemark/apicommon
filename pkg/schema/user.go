@@ -16,5 +16,6 @@ type UserObjProperty struct {
 }
 
 type UserObjPropertyProf struct {
-	Text string `json:"text"`
+	Desc string `json:"desc"`
+	Vent string `json:"vent"`
 }
