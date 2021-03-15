@@ -23,6 +23,8 @@ func Role(m map[string]string) *Key {
 			rei = Timeline(m).Elem()
 		case "update":
 			rei = Update(m).Elem()
+		case "user":
+			rei = User(m).Elem()
 		case "venture":
 			rei = Venture(m).Elem()
 		}
