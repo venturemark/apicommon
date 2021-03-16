@@ -16,6 +16,8 @@ func Subject(m map[string]string) *Key {
 			rei = Audience(m).List()
 		case "message":
 			rei = Message(m).List()
+		case "subject":
+			rei = "sub"
 		case "timeline":
 			rei = Timeline(m).List()
 		case "update":
