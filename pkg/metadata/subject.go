@@ -1,6 +1,5 @@
 package metadata
 
 const (
-	SubjectClaim = "subject.venturemark.co/claim"
-	SubjectID    = "subject.venturemark.co/id"
+	SubjectID = "subject.venturemark.co/id"
 )
