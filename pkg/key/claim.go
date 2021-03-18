@@ -19,7 +19,6 @@ func Claim(m map[string]string) *Key {
 		var id *ID
 		{
 			id = &ID{
-				f: 0,
 				s: cli,
 			}
 		}

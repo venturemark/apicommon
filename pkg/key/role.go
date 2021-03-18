@@ -12,11 +12,18 @@ import (
 // version of any of the other resource keys defined here, e.g.
 // sha265("ven:al9qy:tml") for records of timeline roles.
 func Role(m map[string]string) *Key {
+	var roi string
+	{
+		roi = m[metadata.RoleID]
+	}
+
 	var rei string
 	{
 		switch m[metadata.ResourceKind] {
 		case "message":
 			rei = Message(m).Elem()
+		case "role":
+			rei = fmt.Sprintf("res:%s:rol", hash("rol:%s", roi))
 		case "timeline":
 			rei = Timeline(m).Elem()
 		case "update":
@@ -26,11 +33,6 @@ func Role(m map[string]string) *Key {
 		case "venture":
 			rei = Venture(m).Elem()
 		}
-	}
-
-	var roi string
-	{
-		roi = m[metadata.RoleID]
 	}
 
 	var k *Key
