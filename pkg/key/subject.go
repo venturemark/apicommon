@@ -14,12 +14,12 @@ func Subject(m map[string]string) *Key {
 		switch m[metadata.ResourceKind] {
 		case "message":
 			rei = Message(m).List()
-		case "subject":
-			rei = "sub"
 		case "timeline":
 			rei = Timeline(m).List()
 		case "update":
 			rei = Update(m).List()
+		case "user":
+			rei = User(m).List()
 		case "venture":
 			rei = Venture(m).List()
 		}
@@ -41,12 +41,12 @@ func Subject(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:use", hash("res:%s:use:%s", rei, sui))
+			ele = fmt.Sprintf("res:%s:sub", hash("res:%s:sub:%s", rei, sui))
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:use", hash("res:%s:use", rei))
+			lis = fmt.Sprintf("res:%s:sub", hash("res:%s:sub", rei))
 		}
 
 		k = &Key{
