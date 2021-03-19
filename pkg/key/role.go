@@ -22,8 +22,6 @@ func Role(m map[string]string) *Key {
 		switch m[metadata.ResourceKind] {
 		case "message":
 			rei = Message(m).Elem()
-		case "role":
-			rei = fmt.Sprintf("res:%s:rol", hash("rol:%s", roi))
 		case "timeline":
 			rei = Timeline(m).Elem()
 		case "update":

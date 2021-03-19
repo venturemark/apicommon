@@ -14,8 +14,6 @@ func Subject(m map[string]string) *Key {
 		switch m[metadata.ResourceKind] {
 		case "message":
 			rei = Message(m).List()
-		case "role":
-			rei = Role(m).List()
 		case "timeline":
 			rei = Timeline(m).List()
 		case "update":
