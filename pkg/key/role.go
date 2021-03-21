@@ -15,6 +15,8 @@ func Role(m map[string]string) *Key {
 	var rei string
 	{
 		switch m[metadata.ResourceKind] {
+		case "invite":
+			rei = Invite(m).Elem()
 		case "message":
 			rei = Message(m).Elem()
 		case "timeline":
