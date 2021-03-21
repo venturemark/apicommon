@@ -6,6 +6,7 @@ import (
 )
 
 const (
+	Mail = "mail:%s"
 	Name = "name:%s"
 )
 
