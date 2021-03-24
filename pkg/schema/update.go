@@ -10,5 +10,6 @@ type UpdateObj struct {
 }
 
 type UpdateObjProperty struct {
+	Head string `json:"head"`
 	Text string `json:"text"`
 }
