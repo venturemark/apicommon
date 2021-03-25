@@ -38,12 +38,12 @@ func Invite(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:inv", hash("ven:%s:inv:%s", vei, ini))
+			ele = fmt.Sprintf("ven:%s:inv:%s", vei, ini)
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:inv", hash("ven:%s:inv", vei))
+			lis = fmt.Sprintf("ven:%s:inv", vei)
 		}
 
 		k = &Key{

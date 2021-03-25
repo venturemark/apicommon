@@ -43,12 +43,12 @@ func Update(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:upd", hash("ven:%s:tim:%s:upd:%s", vei, tii, upi))
+			ele = fmt.Sprintf("ven:%s:tim:%s:upd:%s", vei, tii, upi)
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:upd", hash("ven:%s:tim:%s:upd", vei, tii))
+			lis = fmt.Sprintf("ven:%s:tim:%s:upd", vei, tii)
 		}
 
 		k = &Key{

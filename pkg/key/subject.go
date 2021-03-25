@@ -43,12 +43,12 @@ func Subject(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:sub", hash("res:%s:sub:%s", rei, sui))
+			ele = fmt.Sprintf("%s:sub:%s", rei, sui)
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:sub", hash("res:%s:sub", rei))
+			lis = fmt.Sprintf("%s:sub", rei)
 		}
 
 		k = &Key{

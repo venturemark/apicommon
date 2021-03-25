@@ -48,12 +48,12 @@ func Message(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:mes", hash("ven:%s:tim:%s:upd:%s:mes:%s", vei, tii, upi, mei))
+			ele = fmt.Sprintf("ven:%s:tim:%s:upd:%s:mes:%s", vei, tii, upi, mei)
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:mes", hash("ven:%s:tim:%s:upd:%s:mes", vei, tii, upi))
+			lis = fmt.Sprintf("ven:%s:tim:%s:upd:%s:mes", vei, tii, upi)
 		}
 
 		k = &Key{

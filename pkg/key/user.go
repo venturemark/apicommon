@@ -33,12 +33,12 @@ func User(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:use", hash("use:%s", usi))
+			ele = fmt.Sprintf("use:%s", usi)
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:use", hash("use"))
+			lis = fmt.Sprintf("use") // nolint: gosimple
 		}
 
 		k = &Key{

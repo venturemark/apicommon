@@ -26,12 +26,12 @@ func Claim(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:cla", hash("cla:%s", cli))
+			ele = fmt.Sprintf("cla:%s", cli)
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:cla", hash("cla"))
+			lis = fmt.Sprintf("cla") // nolint: gosimple
 		}
 
 		k = &Key{

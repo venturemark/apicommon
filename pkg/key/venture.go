@@ -33,12 +33,12 @@ func Venture(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:ven", hash("ven:%s", vei))
+			ele = fmt.Sprintf("ven:%s", vei)
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:ven", hash("ven"))
+			lis = fmt.Sprintf("ven") // nolint: gosimple
 		}
 
 		k = &Key{
