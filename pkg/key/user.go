@@ -1,6 +1,7 @@
 package key
 
 import (
+	"fmt"
 	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
@@ -32,12 +33,12 @@ func User(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = group("res:%s:use", group("use:%s", usi))
+			ele = fmt.Sprintf("use:%s", usi)
 		}
 
 		var lis string
 		{
-			lis = group("res:%s:use", group("use"))
+			lis = fmt.Sprintf("use")
 		}
 
 		k = &Key{

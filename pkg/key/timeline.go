@@ -1,6 +1,7 @@
 package key
 
 import (
+	"fmt"
 	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
@@ -37,12 +38,12 @@ func Timeline(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = group("res:%s:tim", group("ven:%s:tim:%s", vei, tii))
+			ele = fmt.Sprintf("ven:%s:tim:%s", vei, tii)
 		}
 
 		var lis string
 		{
-			lis = group("res:%s:tim", group("ven:%s:tim", vei))
+			lis = fmt.Sprintf("ven:%s:tim", vei)
 		}
 
 		k = &Key{

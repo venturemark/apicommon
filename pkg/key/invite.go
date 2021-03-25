@@ -1,6 +1,7 @@
 package key
 
 import (
+	"fmt"
 	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
@@ -37,12 +38,12 @@ func Invite(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = group("res:%s:inv", group("ven:%s:inv:%s", vei, ini))
+			ele = fmt.Sprintf("ven:%s:inv:%s", vei, ini)
 		}
 
 		var lis string
 		{
-			lis = group("res:%s:inv", group("ven:%s:inv", vei))
+			lis = fmt.Sprintf("ven:%s:inv", vei)
 		}
 
 		k = &Key{
