@@ -1,7 +1,6 @@
 package key
 
 import (
-	"fmt"
 	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
@@ -43,12 +42,12 @@ func Update(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:upd", hash("ven:%s:tim:%s:upd:%s", vei, tii, upi))
+			ele = group("res:%s:upd", group("ven:%s:tim:%s:upd:%s", vei, tii, upi))
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:upd", hash("ven:%s:tim:%s:upd", vei, tii))
+			lis = group("res:%s:upd", group("ven:%s:tim:%s:upd", vei, tii))
 		}
 
 		k = &Key{

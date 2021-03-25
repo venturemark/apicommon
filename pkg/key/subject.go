@@ -1,8 +1,6 @@
 package key
 
 import (
-	"fmt"
-
 	"github.com/venturemark/apicommon/pkg/metadata"
 )
 
@@ -43,12 +41,12 @@ func Subject(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:sub", hash("res:%s:sub:%s", rei, sui))
+			ele = group("res:%s:sub", group("res:%s:sub:%s", rei, sui))
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:sub", hash("res:%s:sub", rei))
+			lis = group("res:%s:sub", group("res:%s:sub", rei))
 		}
 
 		k = &Key{

@@ -1,7 +1,6 @@
 package key
 
 import (
-	"fmt"
 	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
@@ -33,12 +32,12 @@ func Venture(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:ven", hash("ven:%s", vei))
+			ele = group("res:%s:ven", group("ven:%s", vei))
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:ven", hash("ven"))
+			lis = group("res:%s:ven", group("ven"))
 		}
 
 		k = &Key{

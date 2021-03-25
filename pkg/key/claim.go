@@ -1,8 +1,6 @@
 package key
 
 import (
-	"fmt"
-
 	"github.com/venturemark/apicommon/pkg/metadata"
 )
 
@@ -26,12 +24,12 @@ func Claim(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:cla", hash("cla:%s", cli))
+			ele = group("res:%s:cla", group("cla:%s", cli))
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:cla", hash("cla"))
+			lis = group("res:%s:cla", group("cla"))
 		}
 
 		k = &Key{

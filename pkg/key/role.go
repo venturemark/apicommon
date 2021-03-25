@@ -1,7 +1,6 @@
 package key
 
 import (
-	"fmt"
 	"strconv"
 
 	"github.com/venturemark/apicommon/pkg/metadata"
@@ -53,12 +52,12 @@ func Role(m map[string]string) *Key {
 
 		var ele string
 		{
-			ele = fmt.Sprintf("res:%s:rol", hash("res:%s:rol:%s", rei, roi))
+			ele = group("res:%s:rol", group("res:%s:rol:%s", rei, roi))
 		}
 
 		var lis string
 		{
-			lis = fmt.Sprintf("res:%s:rol", hash("res:%s:rol", rei))
+			lis = group("res:%s:rol", group("res:%s:rol", rei))
 		}
 
 		k = &Key{
