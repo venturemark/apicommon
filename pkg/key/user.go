@@ -38,7 +38,7 @@ func User(m map[string]string) *Key {
 
 		var lis string
 		{
-			lis = fmt.Sprintf("use")
+			lis = fmt.Sprintf("use") // nolint: gosimple
 		}
 
 		k = &Key{

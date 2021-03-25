@@ -31,7 +31,7 @@ func Claim(m map[string]string) *Key {
 
 		var lis string
 		{
-			lis = fmt.Sprintf("cla")
+			lis = fmt.Sprintf("cla") // nolint: gosimple
 		}
 
 		k = &Key{

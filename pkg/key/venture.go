@@ -38,7 +38,7 @@ func Venture(m map[string]string) *Key {
 
 		var lis string
 		{
-			lis = fmt.Sprintf("ven")
+			lis = fmt.Sprintf("ven") // nolint: gosimple
 		}
 
 		k = &Key{
