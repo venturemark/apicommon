@@ -11,6 +11,7 @@ type UserObj struct {
 
 type UserObjProperty struct {
 	Desc string                `json:"desc"`
+	Mail string                `json:"mail"`
 	Name string                `json:"name"`
 	Prof []UserObjPropertyProf `json:"prof"`
 }
