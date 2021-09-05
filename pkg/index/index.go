@@ -6,8 +6,9 @@ import (
 )
 
 const (
-	Mail = "mail:%s"
-	Name = "name:%s"
+	Mail         = "mail:%s"
+	MailTimeline = "mail:%s:timeline:%s"
+	Name         = "name:%s"
 )
 
 func New(f string, v ...interface{}) string {
