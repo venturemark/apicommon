@@ -11,7 +11,7 @@ func textNodeToHTML(node Node, builder io.StringWriter) {
 	_, _ = builder.WriteString(html.EscapeString(node.Text))
 }
 
-func containerNodeToHTML(node Node, styles map[string]string, builder *strings.Builder) {
+func containerNodeToHTML(node Node, styles map[string]string, builder io.StringWriter) {
 	tag := "div"
 	style := ""
 	if node.Type == "title" {
@@ -32,9 +32,9 @@ func containerNodeToHTML(node Node, styles map[string]string, builder *strings.B
 
 	if tag != "" {
 		if style != "" {
-			builder.WriteString(fmt.Sprintf("<%s style=\"%s\">", tag, style))
+			_, _ = builder.WriteString(fmt.Sprintf("<%s style=\"%s\">", tag, style))
 		} else {
-			builder.WriteString(fmt.Sprintf("<%s>", tag))
+			_, _ = builder.WriteString(fmt.Sprintf("<%s>", tag))
 		}
 	}
 
@@ -47,7 +47,7 @@ func containerNodeToHTML(node Node, styles map[string]string, builder *strings.B
 	}
 
 	if tag != "" {
-		builder.WriteString(fmt.Sprintf("</%s>", tag))
+		_, _ = builder.WriteString(fmt.Sprintf("</%s>", tag))
 	}
 }
 

@@ -1,22 +1,22 @@
 package slate
 
-func textLength(node Node) int {
+func nodeLength(node Node) int {
 	if node.Type == "" {
 		return len(node.Text)
 	}
 
 	var totalLength int
 	for _, n := range node.Children {
-		totalLength += textLength(n)
+		totalLength += nodeLength(n)
 	}
 
 	return totalLength
 }
 
-func TextLength(nodes Nodes) int {
+func Length(nodes Nodes) int {
 	var totalLength int
 	for _, n := range nodes {
-		totalLength += textLength(n)
+		totalLength += nodeLength(n)
 	}
 
 	return totalLength
