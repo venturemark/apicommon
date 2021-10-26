@@ -10,6 +10,12 @@ type UpdateObj struct {
 }
 
 type UpdateObjProperty struct {
-	Head string `json:"head"`
-	Text string `json:"text"`
+	Attachments []UpdateObjPropertyAttachment `json:"attachments"`
+	Head        string                        `json:"head"`
+	Text        string                        `json:"text"`
+}
+
+type UpdateObjPropertyAttachment struct {
+	Addr string `json:"addr"`
+	Type string `json:"type"`
 }
