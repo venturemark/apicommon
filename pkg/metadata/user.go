@@ -1,6 +1,8 @@
 package metadata
 
 const (
-	UserID     = "user.venturemark.co/id"
-	UserStatus = "user.venturemark.co/status"
+	UserID             = "user.venturemark.co/id"
+	UserPrepopulate    = "user.venturemark.co/prepopulate"
+	UserStatus         = "user.venturemark.co/status"
+	UserSurveyResponse = "user.venturemark.co/surveyResponse"
 )
