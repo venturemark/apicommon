@@ -26,6 +26,9 @@ func containerNodeToHTML(node Node, styles map[string]string, builder io.StringW
 	} else if node.Type == "list-item" {
 		tag = "li"
 		style = styles[node.Type]
+	} else if node.Type == "a" {
+		tag = "a"
+		style = styles[node.Type]
 	} else if node.Type == "" {
 		tag = ""
 	}
